@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>MoonDoge - Dogecoin News & Articles</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale = 1.0, user-scalable = no">
+  <meta name="author" content="Jakub Minkiewicz">
+  <meta name="description" content="Latest news, articles and updates surronding the Dogecoin cryptocurrency.">
+  <meta name="keywords" content="dogecoin,dogecoin news,dogecoin tutorial,dogecoin updates,bitcoin,cryptocurrency">
+  <link rel="stylesheet" href="../stylesheets/stylesheet.css" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" type="text/css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+    crossorigin="anonymous">
+  <script src="../scripts/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script>
+  <script id="news-page-template" type="text/x-handlebars-template">
+    <h1>{{headline}}</h1>
+    <section>
+        <h2>{{fragment}}</h2>
+        <div id="news-img" style="{{{img}}}"></div>
+        <p>{{{content}}}</p>
+    </section>
+  </script>
+
+  <script id="news-bottom-bar" type="text/x-handlebars-template">
+  <a href="../{{{url}}}" style="{{{img}}}" id="{{{ids}}}">
+        <div id="filter"></div>
+        <div id="type"><span>{{type}}</span></div>
+        <div id="date"><span>{{date}}</span></div>
+        <div id="headline">{{headline}}</div>
+    </a>
+  </script>
+</head>
+
+<body>
+  <main>
+    <header>
+    </header>
+    <nav>
+      <ul class="navbar" role="navigation">
+        <a href="../index.html">
+          <li>MoonDoge, Dogecoin News</li>
+        </a>
+        <ul class="mob-nav">
+          <a href="../index.html">
+            <li>MoonDoge</li>
+          </a>
+          <li><button class="mobile-btn" id="mobile-btn"><i class="fas fa-bars"></i></button></li>
+        </ul>
+        <a href="../index.html" id="home">
+          <li><i class="fa fa-home"></i> Home</li>
+        </a>
+        <a href="../news.html" id="news">
+          <li><i class="far fa-newspaper"></i> News</li>
+        </a>
+        <a href="../price.html" id="price">
+          <li><i class="fas fa-chart-line"></i> Price</li>
+        </a>
+        <a href="../about.html" id="about">
+          <li><i class="far fa-question-circle"></i> About</li>
+        </a>
+      </ul>
+    </nav>
+    <article id="news-page">
+       <!--
+           Articles added dynamically from Articles.js
+       -->
+    </article>
+    <h3>Read more</h3>
+    <div class="news-container">
+        <!--
+           'Read more' section dynamically randomised and added from Articles.js
+        -->
+    </div>
+  </main>
+  <footer>
+    <div class="footer-content">
+      <section>
+        <span><a href="../index.html">Home</a></span>
+        <span><a href="../news.html">News</a></span>
+        <span><a href="../price.html">Price</a></span>
+        <span><a href="../about.html">About</a></span>
+      </section>
+      <section>
+        <a href="https://www.reddit.com/r/dogecoin/"><i class="fab fa-reddit-square"></i></a>
+        <a href="https://twitter.com/dogecoin?lang=en"><i class="fab fa-twitter-square"></i></a>
+      </section>
+    </div>
+    <section>
+      Copyright 2018. Made by Jakub Minkiewicz.
+    </section>
+  </footer>
+</body>
+<script src="../scripts/Articles.js"></script>
+<script src="../scripts/DogecoinPriceScript.js"></script>
+<script src="../scripts/ResponsiveScript.js"></script>
+<script>
+    var theTemplateScript = $("#news-page-template").html();
+    var theTemplate = Handlebars.compile(theTemplateScript);
+    var theCompiledHtml = theTemplate(articles[3]);
+    $('#news-page').append(theCompiledHtml);
+</script>
+<script src="../scripts//HandleBarsRandomArticle.js"></script>
+</script>
+</html>

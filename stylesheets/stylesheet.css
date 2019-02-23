@@ -1,0 +1,693 @@
+body {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0; 
+    font-size: 16px;
+}
+
+body::after {
+    content: "";
+    background: url("../pics/background.jpg");
+    opacity: 0.05;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    z-index: -1;   
+  }
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    background-image: url("../pics/header-banner.jpg");
+    background-position: center;
+    width:100%;
+    height: 230px;
+    border-radius: 5px;
+    box-shadow: 5px 10px 20px -20px rgba(85,172,238 ,1);
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.navbar {
+    font-size: 1em;
+    align-items: center;
+    top:0;
+    background-color: beige;
+    border: 1px solid rgba(238,238,238 ,1);
+    border-radius: 5px;
+    box-shadow: 5px 10px 20px -20px rgba(85,172,238 ,1);
+    color: rgba(117,117,117 ,1);
+  }
+
+.navbar li:not(:first-child) {
+    cursor: pointer;
+}
+
+
+.navbar li:hover{
+    color: rgba(85,172,238 ,1);
+}
+
+.container {
+    font-size: 1em;
+    padding: 0;
+    display: grid;
+    grid-gap: 10px;
+    text-align: center;
+}
+
+.container>a {
+    border: 1px solid rgba(238,238,238 ,1);
+    border-radius: 5px;
+    box-shadow: 5px 10px 20px -20px rgb(147, 147, 147);
+    text-align: center;
+}
+
+.container > a {
+    background-image: url("../pics/background.jpg");
+    background-position: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    height: 12em;
+}
+
+#article1 {
+    grid-area: article1;
+    border-radius: 5px;
+    box-shadow: 5px 10px 20px -20px rgba(85,172,238 ,1);
+}
+
+
+#article2 {
+    grid-area: article2;
+    background-image: url("../pics/Dogecoin.jpg");
+    border-radius: 5px;
+    box-shadow: 5px 10px 20px -20px rgba(85,172,238 ,1);
+}
+
+#article3 {
+    background-image: url("../pics/chart-going-up1.jpg");
+    grid-area: article3;
+    border-radius: 5px;
+    box-shadow: 5px 10px 20px -20px rgba(85,172,238 ,1);
+}
+
+#article4 {
+    grid-area: article4;
+    background-image: url("../pics/dogecoin-car.jpg");
+    border-radius: 5px;
+    box-shadow: 5px 10px 20px -20px rgba(85,172,238 ,1);
+}
+
+#main-article {
+    grid-area: main-article;
+    background-image: url("../pics/doge-olympics.jpg");
+    height: 24em;
+    border-radius: 5px;
+    box-shadow: 5px 10px 20px -20px rgba(85,172,238 ,1);
+}
+
+#main-article>#headline {
+    font-size: 2em;
+}
+
+#advert {
+    grid-area: advert;
+    background-image: url("../pics/ad.jpg");
+}
+
+#container2 {
+    padding-top: 10px;
+}
+
+#type {
+    text-align: start;
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+}
+
+#type>span {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    box-shadow: 5px 10px 20px -20px rgba(85,172,238 ,1);
+}
+
+#date {
+    text-align: end;
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+#timestamp {
+    text-align: end;
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+}
+
+#date >span {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    box-shadow: 5px 10px 20px -20px rgba(85,172,238 ,1);
+}
+
+#headline {
+    color: white;
+    text-align: start;
+    vertical-align: center;
+    grid-row: 4 / 5;
+    grid-column: 1 / 4;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-style: bold;
+    margin-top: auto;
+    padding: 5px 0px 5px 5px;
+    border-radius: 5px;
+    box-shadow: 5px 10px 20px -20px rgba(85,172,238 ,1);
+}
+
+#filter {
+    background-color: rgba(0, 0, 0, 0.15);
+    grid-row: 1 / 5;
+    grid-column: 1 / 5;
+    border-radius: 5px;
+    box-shadow: 5px 10px 20px -20px rgba(85,172,238 ,1);
+    height: 100%;
+    width: 100%;
+}
+
+#doge-price {
+    font-size: 2.5em;
+    color: white;
+    text-align: center;
+    vertical-align: center;
+    grid-row: 2 / 3;
+    grid-column: 1 / 4;
+}
+
+#doge-24h-price {
+    font-size: 2em;
+    text-align:center;
+    vertical-align: center;
+    grid-row: 4 / 5;
+    grid-column: 1 / 4;
+}
+
+#doge-24h-price-tag {
+    font-size: 1.5em;
+    padding-top: 19px;
+    text-align:center;
+    grid-row: 3 / 4;
+    grid-column: 1 / 4;
+}
+
+div>span {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    box-shadow: 5px 10px 20px -20px rgba(85,172,238 ,1);
+}
+
+footer {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(34, 34, 34);
+  }
+
+.footer-content > :nth-child(1) {
+    grid-area: copyright;
+    font-size: 1.1em;
+    color: rgba(255, 255, 255, 0.6);
+    padding-left: 50px;
+    padding-top: 10px;
+}
+
+.footer-content > :nth-child(1) > a {
+    padding-top:10px;
+}
+
+.footer-content > :nth-child(2) {
+    grid-area: social;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-content > :nth-child(2) > :nth-child(1) {
+    padding: 10px;
+}
+
+.footer-content > :nth-child(2) > :nth-child(2) {
+    padding: 10px;
+}
+
+.footer-content {
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0;
+    grid-template-areas: 
+    "copyright social";
+}
+
+
+footer > section {
+    color: white;
+    text-align: center;
+}
+
+footer > div > section > span>a:hover {
+    color:aqua;
+}
+
+footer>div>section>a>i:hover{
+    color: aqua;
+}
+
+.about-page>h1,p {
+text-align: center;
+}
+
+#about-img {
+    background: url("../pics/about.gif");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 400px;
+    background-position: center;
+    border-radius: 5px;
+    box-shadow: 5px 10px 20px -20px rgba(85,172,238 ,1);
+}
+
+article {
+    border-radius: 5px;
+    box-shadow: 5px 10px 20px -20px rgba(85,172,238 ,1);
+    color:black;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+article > section {
+    text-align: center;
+}
+
+article > section > h1 {
+    font-size: 2em;
+}
+
+article > h1 {
+    text-align: center;
+    font-size: 2em;
+}
+
+article > h2 {
+    text-align: center;
+    font-size: 1em;
+}
+
+.price-container {
+    display:grid;
+    padding: 0;
+    grid-gap: 10px;
+    text-align: center;
+    height: auto;
+}
+.price-container > div {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: rgba(0,0,0,0.2);
+    border: 1px solid rgba(238,238,238 ,1);
+    border-radius: 5px;
+    box-shadow: 5px 10px 20px -20px rgb(147, 147, 147);
+    text-align: center;
+    height: 12em;
+}
+
+.price-container > div > div {
+    margin-bottom: auto;
+    margin-top: auto;
+    font-size: 2em;
+}
+
+#news-container {
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    box-shadow: 5px 10px 20px -20px rgb(147, 147, 147);
+}
+
+#news-page > section {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    box-shadow: 5px 10px 20px -20px rgb(147, 147, 147);
+}
+
+h3 {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+#news-page > section > h1 {
+    font-size: 2em;
+}
+
+#news-page > section > h2 {
+    font-size: 1.2em;
+}
+
+#news-page > section > div {
+    width: auto;
+    height: 300px;
+    background-position: center;
+    background-size: auto 100%;
+    -webkit-background-size: auto 100%;
+    -o-background-size: auto 100%;
+    -moz-background-size: auto 100%;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    box-shadow: 5px 10px 20px -20px rgb(147, 147, 147);
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+@media screen and (min-width: 880px){
+
+    .container>a {
+        background-size: 100% auto;
+        -webkit-background-size: 100% auto;
+        -o-background-size: 100% auto;
+        -moz-background-size: 100% auto;
+    }
+    
+
+    .container {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 2fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "article1 article2 article2"
+        "main-article main-article main-article"
+        "article3 article3 article4"
+        "advert advert advert";
+        height: 62em;
+    }
+
+    nav {
+    position: -webkit-sticky;
+    position: sticky;
+    top:-18px;
+    }
+
+    .navbar { 
+        display: flex;
+        flex: 1 1;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .navbar li:not(:first-child) {
+        padding-left: 19px;
+        padding-right: 19px;
+        padding-top: 15px;
+        padding-bottom : 15px;
+
+    }
+
+    li:nth-child(1){
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 15px;
+        padding-bottom : 15px;
+    }
+
+    .navbar>a:first-child {
+        margin-right: auto;
+    }
+
+    .mob-nav {
+        display: none;
+    }
+
+    #headline:not(#main-article>#headline) {
+        font-size: 1.1em;
+    }
+
+    #main-article>#headline {
+        font-size: 1.5em;
+    }
+
+    .footer-content > :nth-child(1) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer {
+        margin-top: 10px;
+    }
+
+    .footer-content > :nth-child(2){
+    font-size: 2em;
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-right: 50px;
+    }
+
+    footer > div > section > span {
+        padding-top: 10px;
+    }
+
+    .price-container {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .news-container {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        height: auto;
+        gap: 10px;
+    }
+
+     #news-container {
+        background-position: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        height: 16em;
+        background-size: 100% auto;
+        -webkit-background-size: 100% auto;
+        -o-background-size: 100% auto;
+        -moz-background-size: 100% auto;
+    }
+}
+
+@media screen and (max-width: 880px) {
+
+    .container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 2fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "article1 article2"
+        "main-article main-article"
+        "article3 article4"
+        "advert advert";
+        height: 63em;
+    }
+
+    #price-usd-price{
+        grid-area: price-usd-price;
+    }
+
+    #price-usd-change{
+        grid-area: price-usd-change;
+    }
+
+    #price-usd-vol{
+        grid-area: price-usd-vol;
+    }
+
+    #price-gbp-price{
+        grid-area: price-gbp-price;
+    }
+
+    #price-gbp-change{
+        grid-area: price-gbp-change;
+    }
+
+    #price-gbp-vol{
+        grid-area: price-gbp-vol;
+
+    }
+
+    #price-eur-price{
+        grid-area: price-eur-price;
+    }
+    #price-eur-change{
+        grid-area: price-eur-change;
+    }
+
+    #price-eur-vol{
+        grid-area: price-eur-vol;
+    }
+    .price-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "price-usd-price"
+        "price-usd-change"
+        "price-usd-vol"
+        "price-gbp-price"
+        "price-gbp-change"
+        "price-gbp-vol"
+        "price-eur-price"
+        "price-eur-change"
+        "price-eur-vol";
+    }
+
+    #doge-price {
+        font-size: 1.5em;
+        color: white;
+        text-align: center;
+        vertical-align: center;
+        grid-row: 2 / 4;
+        grid-column: 1 / 4;
+    }
+    header {
+        display: none;
+    }
+
+    .navbar{
+        flex-direction: column;
+        position: relative;
+    }
+
+    .container>a {
+        background-size: auto 100%;
+        -webkit-background-size: auto 100%;
+        -o-background-size: auto 100%;
+        -moz-background-size: auto 100%;
+    }
+
+    #headline {
+        font-size: 1em;
+    }
+
+    #main-article>#headline {
+        font-size: 1.1em;
+    }
+
+    .navbar > a:hover {
+        background-color: aqua;
+    }
+
+    .navbar > a:not(:nth-child(1)){
+        display: flex;
+        margin: auto;
+        padding-left: 40%;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    .mob-nav {
+        display: flex;
+        flex-direction: row;
+    }
+
+    /* Can't put padding into .mob-nav only as buttons will not work */
+    .mob-nav > a > li:first-child {
+        padding: 20px;
+    }
+
+    .mob-nav > li:nth-child(2) {
+    margin-left: auto;
+    }
+
+    .mobile-btn {
+        border: none;
+        color: rgba(117,117,117 ,1);
+        background-color: inherit;
+        padding: 12px;
+        cursor: pointer;
+        font-size: 1.8em;
+    }
+
+    .navbar > a:nth-child(1){
+        display: none;
+    }
+
+    footer {
+        font-size: 0.5em;
+    }
+
+    footer > :nth-child(2){
+        padding-bottom: 20px;
+    }
+
+    .footer-content > :nth-child(1) {
+        display: flex;
+        margin-top: auto;
+        margin-bottom: auto;
+        justify-content: space-evenly;
+        flex-direction: row;
+        padding: 0;
+        font-size: 1.8em;
+    }
+
+    .footer-content > :nth-child(2) {
+        display: flex;
+        flex-direction: row;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+        font-size: 3em;
+    }
+
+    .news-container {
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
+        height: auto;
+        gap: 10px;
+        padding-bottom: 10px;
+        
+    }
+
+     #news-container {
+        background-position: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        height: 16em;
+        background-size: auto 100%;
+        -webkit-background-size: auto 100%;
+        -o-background-size: auto 100%;
+        -moz-background-size: auto 100%;
+    }
+
+    
+}
